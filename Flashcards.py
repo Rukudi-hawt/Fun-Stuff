@@ -1,19 +1,25 @@
-Question_Answer = {'Which gas moderates the ozone reaction?' : 'Nitrogen', 'Explain the reaction within the ozone layer?' : 'O3 separates into O2 and O, which then bond together with free particles (i.e. O2 wit free O and vice versa).', 'What is the third layer of the atmosphere?' : 'Mesosphere', 'What is the important gas in the second layer of Earth?' : 'Ozone', 'What is ozone made of?' : 'O3'}
-
-#//TO DO:
-#---add condition for multiple answers (i.e. more than 1 word/has spaces)
-#---create piles for well known/not known (how would I set probabilities/recurrances based on how known)
+Question_Answer = {'Which gas moderates the ozone reaction?' : 'Nitrogen', 'What is the third layer of the atmosphere?' : 'Mesosphere', 'What is the important gas in the second layer of Earth?' : 'Ozone', 'What is ozone made of?' : 'O3'}
 
 # Let's play a GAME!!!
 #Guess the answer to the given question. Get it right, and you move on. Get it wrong, and.... let's just say, you probably won't enjoy what comes next :)
 
 import random
 
+#variables to tally amount of times a specific question was correct [can i pair the dictionary with a list indexing how often things are correct??]
+## {key1: item1, key2: item2, key3: item3} == [tally1, tally2, tally 3]
+
+tally_questions = []
+#populate tally_questions (with 0 counter) to correspond with dictionary using a for loop
+for i in range(0, len(Question_Answer), 1):
+     tally_questions.append(0)
+
+print(tally_questions)
+
 next_round = 'yes'
 score = 0
 while next_round.upper() == 'YES':
 
-     RandInt = random.randint(0, 4)
+     RandInt = random.randint(0, 3)
 
      Q_A = list(Question_Answer.items())[RandInt] #turns dict. into list then extracts Q&A PAIR at an index in that new list
      # Q_A = ('Question', 'Answer')
