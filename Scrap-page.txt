@@ -1,3 +1,4 @@
 //TO DO:
 ---add condition for multiple answers (i.e. more than 1 word/has spaces)
 ---create piles for well known/not known (how would I set probabilities/recurrances based on how known)
+     ---for now just focus on creating the piles (as written with code and noted with comments)
