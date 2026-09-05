@@ -42,15 +42,27 @@ while next_round.upper() == 'YES':
      next_round = input('\nWould you like to continue to the next round? [Yes/No]', )
 
 
-print('\nThank you for practicing your work. Your score is: ', score, '\nRemember: a question a day keeps the uncertainty away!')
+print('\nThank you for practicing your work. Your score is: ', score, '\nRemember: a question a day keeps the uncertainty away!\n')
 for i in tally_questions:
      if i == 3:
-          well_known.append(tally_questions.index(i))
+          well_known.append(tally_questions.index(i))  # can I just put the integer in instead of using the item index
 
+          if i in medium_known:
+               medium_known.remove(i)   
+               
      if i == 2:
           medium_known.append(tally_questions.index(i))
 
+          if i in well_known:
+               well_known.remove(i)
+
+          if i in least_known:
+               least_known.remove(i)
+
      if i < 2:
           least_known.append(tally_questions.index(i))
+
+          if i in medium_known:
+               medium_known.remove(i)
 
 print(well_known, ':', medium_known, ':', least_known)
