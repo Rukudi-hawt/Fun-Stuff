@@ -45,13 +45,13 @@ while next_round.upper() == 'YES':
 print('\nThank you for practicing your work. Your score is: ', score, '\nRemember: a question a day keeps the uncertainty away!\n')
 for i in tally_questions:
      if i == 3:
-          well_known.append(tally_questions.index(i))  # can I just put the integer in instead of using the item index
+          well_known.append(Question_Answer.index(i))  # can I just put the integer in instead of using the item index
 
           if i in medium_known:
                medium_known.remove(i)   
                
      if i == 2:
-          medium_known.append(tally_questions.index(i))
+          medium_known.append(Question_Answer.index(i))
 
           if i in well_known:
                well_known.remove(i)
@@ -60,7 +60,7 @@ for i in tally_questions:
                least_known.remove(i)
 
      if i < 2:
-          least_known.append(tally_questions.index(i))
+          least_known.append(tally_questions.index(i)) #i does not give you index, it is a counter
 
           if i in medium_known:
                medium_known.remove(i)
