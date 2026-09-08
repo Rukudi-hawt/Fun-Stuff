@@ -1,0 +1,8 @@
+//TO DO:
+---loop through FOLLOWING list (since it has no bullet point)
+
+Logic:
+
+- loop in 2's
+- 1,2 = pair1 --> 3,4 = pair2 --> 5,6 = pair 3... etc.
+- provides username-handle pair that allows us to look in FOLLOWERS without removing the bullet point
