@@ -3,6 +3,8 @@
 
 Logic:
 
-- loop in 2's
-- 1,2 = pair1 --> 3,4 = pair2 --> 5,6 = pair 3... etc.
-- provides username-handle pair that allows us to look in FOLLOWERS without removing the bullet point
+- check whether every item in FOLLOWERS is in FOLLOWERS
+- return unmatched items
+- differentiate between USERNAMES and HANDLES
+     - username: has no spaces, has no capital letters... use these to differentiate
+- final returned product are the usernames to unfollow

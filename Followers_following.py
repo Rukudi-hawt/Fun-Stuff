@@ -2937,9 +2937,13 @@ sleepypuppy77'''
 lst_followers = str_followers.splitlines()
 lst_following = str_following.splitlines()
 
-lst_comparative = []
+lst_notfollowingback = []
 
-for i in range(0, len(lst_following), 2):
-     lst_comparative.append( [lst_following[i], lst_following[i + 1]] )
+for i in lst_following:
+     if i in lst_followers:
+          exit
+     else:
+          if (' ' not in i) and (i != i.capitalize()):
+               lst_notfollowingback.append(i)
 
-print(lst_comparative)
+print(lst_notfollowingback)
