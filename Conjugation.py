@@ -9,16 +9,15 @@ sleep
 respirar
 breathe'''
 
-print('WELCOME TO PORTUGUES LESSONS FOR GRINGOS!\nWhad would you like to do today?')
-str_what_to_do = input('Practice/Add:    ', )
+# print('WELCOME TO PORTUGUES LESSONS FOR GRINGOS!\nWhad would you like to do today?')
+# str_what_to_do = input('Practice/Add:    ', )
 
-if str_what_to_do.capitalize() == 'Add':
-     str_portugues_add = input('Please type in your Portugues verb:  ',)
-     if 'ar' or 'ir' or 'er' in str_portugues_add[len(str_portugues_add) - 2: len(str_portugues_add)]:
-          str_ingles_add = input('Please type in your English verb:  ',)
-          str_verbos += '\n' + str_portugues_add + '\n' + str_ingles_add
-
-print(str_verbos)     
+# if str_what_to_do.capitalize() == 'Add':
+#      str_portugues_add = input('Please type in your Portugues verb:  ',)
+#      if 'ar' or 'ir' or 'er' in str_portugues_add[len(str_portugues_add) - 2: len(str_portugues_add)]:
+#           str_ingles_add = input('Please type in your English verb:  ',)
+#           str_verbos += '\n' + str_portugues_add + '\n' + str_ingles_add
+ 
 #if str_what_to_do.capitalize() == 'Practice':
 
 lst_verbos = str_verbos.splitlines()
@@ -46,3 +45,9 @@ for i in range(0, len(lst_verbos) - 1, 2):
      if 'ir' in temp_string[len(temp_string) - 2: len(temp_string)]:
           lst_ir_portugues.append(lst_verbos[i])   
           lst_ir_translation.append(lst_verbos[i+1])
+
+     # for i in lst_ar_portugues:
+     #       print('What does this word translate to: ', i)
+     #       str_answer = lst_ar_translation[lst_ar_portugues.index]
+
+     print(lst_ar_translation[lst_ar_portugues[1].index])
