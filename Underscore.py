@@ -4,6 +4,11 @@ str_to_edit = input('Input the text that you would like to add underscores to:  
 #      if str_to_edit[i] == '':
 #           str_to_edit[i] = '_'
 
-str_edited = str_to_edit.replace(' ', '_')
+str_to_edit = str_to_edit.replace('?', '')
+str_to_edit = str_to_edit.replace(' ', '_')
+str_to_edit = str_to_edit.replace("'", "")
+str_to_edit = str_to_edit.replace("`", "")
+str_to_edit = '#' + str_to_edit
 
-print(str_edited)
+
+print(str_to_edit)
