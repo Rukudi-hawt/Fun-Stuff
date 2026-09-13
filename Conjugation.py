@@ -70,10 +70,10 @@ if str_what_to_do.capitalize() or str_what_to_do2.capitalize() == 'Practice':
                               str_answer = input('Would you like to continue?\nY/N:  ',)  
                               if str_answer.capitalize() == 'Y' or 'Yes':
                                        print('Here you go. Tenta de novo, meu amigo!')
-                                       bl_next = True
+                                       bl_next 
                               else:
                                    print('\nTchau, amigo. Lembre-se: a word a day keeps the forgetfulness away.')
-                                   break       
+                                   break #WHAT THE FUCCCCCK IS GOING ON HERE DUDE      
 
 
 #     print(lst_ar_translation[lst_ar_portugues[1].index])
