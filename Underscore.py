@@ -7,8 +7,13 @@ str_to_edit = input('Input the text that you would like to add underscores to:  
 str_to_edit = str_to_edit.replace('?', '')
 str_to_edit = str_to_edit.replace(' ', '_')
 str_to_edit = str_to_edit.replace("'", "")
-str_to_edit = str_to_edit.replace("`", "")
-str_to_edit = '#' + str_to_edit
+str_to_edit = str_to_edit.replace("’", "")
 
+if '#' in str_to_edit and str_to_edit[1] == '#':
+     str_to_edit = str_to_edit
+elif '#' in str_to_edit and str_to_edit[1] != '#':
+     str_to_edit.replace('#', '')
+else:
+     str_to_edit = '#' + str_to_edit
 
 print(str_to_edit)
