@@ -4,7 +4,6 @@ str_to_edit = input('Input the text that you would like to add underscores to:  
 #      if str_to_edit[i] == '':
 #           str_to_edit[i] = '_'
 
-#need to create a loop that accounts for pretty much ALL special characters and punctuation within the string
 #Do I have to have a while loop to keep my programme running indefinetely?
 
 lst_chars = [
