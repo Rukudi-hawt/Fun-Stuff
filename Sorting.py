@@ -9,9 +9,10 @@ for i in range(0, len(lst_numbers) - 1, 1):
      if i != len(lst_numbers) - 1:
           for x in range(i + 1, len(lst_numbers) - 1, 1):
                if int_comparison > lst_numbers[x]:
+                    index = lst_numbers.index(int_comparison)
                     temp = lst_numbers[x]
-                    lst_numbers.index(int_comparison) = temp 
                     lst_numbers[x] = int_comparison
+                    lst_numbers[index] = temp 
 
 print(lst_numbers)
           
