@@ -1,4 +1,4 @@
-layers = [{'Name' : 'Shale', 'Depth' : '8 m', 'Environment' : 'Shallow marine'}, {'Name' : 'sandstone', 'Depth' : '12 m', 'Environment' : 'River'}, {'Name' : 'Limestone', 'Depth' : '5 m', 'Environment' : 'Shallow marine'}]
+layers = [{'Name' : 'Shale', 'Depth' : '8 m', 'Environment' : 'Shallow marine'}, {'Name' : 'Sandstone', 'Depth' : '12 m', 'Environment' : 'River'}, {'Name' : 'Limestone', 'Depth' : '5 m', 'Environment' : 'Shallow marine'}]
 
 print('STRATAGRAPHIC COLUMN\n', '___________________________________________________________\n')
 
