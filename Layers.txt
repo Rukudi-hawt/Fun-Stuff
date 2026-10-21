@@ -1,3 +1,3 @@
-Shale,8 m,Shallow marine  
-Sandstone,12 m,River
-Limestone,5 m,Shallow marine
+Limestone,5,Shallow marine
+Shale,8,Shallow marine
+Sandstone,12,River
