@@ -1,3 +1,3 @@
-Limestone,5,Shallow marine
-Shale,8,Shallow marine
+Limestone,5,Shallow_marine
+Shale,8,Shallow_marine
 Sandstone,12,River
