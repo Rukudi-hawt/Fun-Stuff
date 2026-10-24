@@ -1,4 +1,4 @@
-x = open(r"C:\Users\rukud\OneDrive\Documents\Fun Stuff\Layers.txt", 'a+')
+x = open(r"C:\Users\rukud\OneDrive\Documents\Fun Stuff\Layers.txt", 'r+')
 # x.seek(0)
 # print(x.read())
 # x.seek(0)
@@ -39,15 +39,9 @@ if input('Would you like to add a new layer: Y/N\n',).capitalize() == 'Y':
      depth.append(new_depth)
      environment.append(new_environment)                     
 
-     new_layer = name[-1] + ',' + depth[-1] + ',' + environment[-1]
-     x.write(f'\n{new_layer}')
-
-
-#sorting algorithm
-print(name, depth, environment)
 for inner in range(0, (len(depth)), 1):
-          for outer in range(0, len(depth), 1):
-               if depth[inner] < depth[outer]:
+          for outer in range(1, len(depth), 1):
+               if depth[inner] > depth[outer]:
                     temp = depth[inner]
                     depth[inner] = depth[outer]
                     depth[outer] = temp
@@ -60,8 +54,13 @@ for inner in range(0, (len(depth)), 1):
                     environment[inner] = environment[outer]
                     environment[outer] = temp
 
-
-print(name, depth, environment)  
+new_layer = name[-1] + ',' + depth[-1] + ',' + environment[-1]
+x.truncate(0)
+x.seek(0)
+for i in range(0, len(name), 1):
+     line = name[i] + ',' + str(depth[i]) + ',' + environment[i] 
+     x.write(f'{line}')
+#x.write(f'\n{new_layer}')
 
 # print(layers, '\n') 
 # layer1 = layers[0].split(',')
