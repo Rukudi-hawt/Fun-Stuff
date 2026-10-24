@@ -18,7 +18,6 @@ environment = []
 
 for i in range(0, len(layers), 1):
      store = layers[i].split(',')
-     print(store)
      name.append(store[0])
      depth.append(store[1])
      environment.append(store[2])
@@ -26,22 +25,43 @@ for i in range(0, len(layers), 1):
 print(name, '\n', depth, '\n', environment)
 
 if input('Would you like to add a new layer: Y/N\n',).capitalize() == 'Y':
-     new_name = (input('Layer name: ',)).capitalize
+     new_name = (input('Layer name: ',)).capitalize()
      new_depth = (input('Layer depth: ',))
-     new_environment = (input('Layer environment: ',)).capitalize
+     new_environment = (input('Layer environment: ',)).capitalize()
 
-     if ' ' in new_name:
-          new_name.replace(' ', '_')
+     if '' in new_name: 
+          new_name.replace('', '_')
 
-     if ' ' in new_environment:
-               new_environment.replace(' ', '_')
+     if '' in new_environment:
+               new_environment.replace('', '_')
 
      name.append(new_name)
      depth.append(new_depth)
-     environment.append(new_environment)
+     environment.append(new_environment)                     
 
      new_layer = name[-1] + ',' + depth[-1] + ',' + environment[-1]
-     x.write(new_layer)
+     x.write(f'\n{new_layer}')
+
+
+#sorting algorithm
+print(name, depth, environment)
+for inner in range(0, (len(depth)), 1):
+          for outer in range(0, len(depth), 1):
+               if depth[inner] < depth[outer]:
+                    temp = depth[inner]
+                    depth[inner] = depth[outer]
+                    depth[outer] = temp
+
+                    temp = name[inner]
+                    name[inner] = name[outer]
+                    name[outer] = temp
+
+                    temp = environment[inner]
+                    environment[inner] = environment[outer]
+                    environment[outer] = temp
+
+
+print(name, depth, environment)  
 
 # print(layers, '\n') 
 # layer1 = layers[0].split(',')

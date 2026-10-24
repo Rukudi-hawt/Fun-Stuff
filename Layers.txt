@@ -1,3 +1,4 @@
 Limestone,5,Shallow_marine
 Shale,8,Shallow_marine
 Sandstone,12,River
+Mudstone,9,Floodplain
