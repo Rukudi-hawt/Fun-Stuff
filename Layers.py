@@ -37,7 +37,7 @@ if input('Would you like to add a new layer: Y/N\n',).capitalize() == 'Y':
 
      name.append(new_name)
      depth.append(new_depth)
-     environment.append(new_environment)                     
+     environment.append(new_environment)    #this is a comment               
 
 for inner in range(0, (len(depth)), 1):
           for outer in range(1, len(depth), 1):
@@ -58,11 +58,16 @@ new_layer = name[-1] + ',' + depth[-1] + ',' + environment[-1]
 x.truncate(0)
 x.seek(0)
 for i in range(0, len(name), 1):
-     line = name[i] + ',' + str(depth[i]) + ',' + environment[i] 
-     x.write(f'{line}')
+     line = name[i] + ',' + str(depth[i]) + ',' + environment[i]
+     if i >= 1: 
+          x.write(f'\n{line}')
+     else:
+          x.write(f'{line}')
+
+x.close()    
 #x.write(f'\n{new_layer}')
 
-# print(layers, '\n') 
+# print(layers, '\n')
 # layer1 = layers[0].split(',')
 # layer2 = layers[1].split(',')
 # layer3 = layers[2].split(',')

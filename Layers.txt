@@ -1,1 +1,4 @@
-Sandstone,12,RiverMudstone,9,FloodplainShale,8,Shallow_marineLimestone,5,Shallow_marine
+Sandstone,12,River
+Mudstone,9,Floodplain
+Shale,8,Shallow_marine
+Limestone,5,Shallow_marine

@@ -6,4 +6,4 @@ for i in range(0, len(layers), 1):
      dctIndex = layers[i]
      strDisplay = ''
      strDisplay =   f'{dctIndex.get('Name')} {dctIndex.get('Depth')} {dctIndex.get('Environment')}'
-     print('Layer ', str(i), ': ', strDisplay)
+     print('Layer ', str(i), ': ', strDisplay) 
