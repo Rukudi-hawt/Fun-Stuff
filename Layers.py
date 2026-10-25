@@ -22,8 +22,6 @@ for i in range(0, len(layers), 1):
      depth.append(store[1])
      environment.append(store[2])
 
-print(name, '\n', depth, '\n', environment)
-
 if input('Would you like to add a new layer: Y/N\n',).capitalize() == 'Y':
      new_name = (input('Layer name: ',)).capitalize()
      new_depth = (input('Layer depth: ',))
@@ -37,8 +35,8 @@ if input('Would you like to add a new layer: Y/N\n',).capitalize() == 'Y':
 
      name.append(new_name)
      depth.append(new_depth)
-     environment.append(new_environment)    #this is a comment               
-
+     environment.append(new_environment)   
+     
 for inner in range(0, (len(depth)), 1):
           for outer in range(1, len(depth), 1):
                if depth[inner] > depth[outer]:
