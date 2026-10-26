@@ -27,6 +27,27 @@ def count_type(types):
       for i in unique_types:
           print(f'{i}: {types.count(i)}')
       print('\n')
+def depositional_event (layer_name, layer_environment, thickness_size):
+     layer_name = input('Insert the rock type: ', )
+     layer_environment = input('Insert the environment type: ', )
+     thickness_size = int(input('Insert the thickness of the layer: ', ))
+
+     layer_name = layer_name.rstrip(' ')
+     layer_name = layer_name.replace(' ', '_')
+
+     name.append(layer_name)
+     environment.append(layer_environment)
+     thickness.append(thickness_size)
+
+     # for i in depth:
+     #       i = i + thickness_size
+     depth = [i + thickness_size for i in depth]
+
+def erosion_event (total_erosion):
+      total_erosion = int(input('Input the total amount of erosion experienced: ',))
+      thickness[-1] = thickness[-1] - total_erosion
+      depth[-1] = depth[-1] - total_erosion
+      depth = [i - total_erosion for i in depth]
 
 txt_layers = open(r"C:\Users\rukud\OneDrive\Documents\Fun Stuff\Layers.txt", 'r+')
 
@@ -44,22 +65,6 @@ for i in range(0, len(layers), 1):
      name.append(store[0])
      depth.append(store[1])
      environment.append(store[2])
-
-def deposit_layer(layer_name, layer_environment, thickness_size):
-     layer_name = input('Insert the rock type: ', )
-     layer_environment = input('Insert the environment type: ', )
-     thickness_size = int(input('Insert the thickness of the layer: ', ))
-
-     layer_name = layer_name.rstrip(' ')
-     layer_name = layer_name.replace(' ', '_')
-
-     name.append(layer_name)
-     environment.append(layer_environment)
-     thickness.append(thickness_size)
-
-     # for i in depth:
-     #       i = i + thickness_size
-     depth = [i + thickness_size for i in depth]
 
 if input('Would you like to add a new layer: Y/N\n',).capitalize() == 'Y':
      new_name = (input('Layer name: ',)).capitalize()
