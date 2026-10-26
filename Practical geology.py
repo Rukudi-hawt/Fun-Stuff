@@ -28,20 +28,6 @@ def count_type(types):
           print(f'{i}: {types.count(i)}')
       print('\n')
 
-def deposit_layer(layer_name, layer_environment):
-     layer_name = input('Insert the rock type: ', )
-     layer_environment = input('Insert the environment type: ',)
-
-     if ' ' in layer_name:
-           layer_name.replace(' ', '_')
-
-     if layer_name(-1) == '_' or ' ':
-           layer_name(-1).delete
-
-     # name.append(layer_name)
-     # environment.append(layer_environment)
-
-
 txt_layers = open(r"C:\Users\rukud\OneDrive\Documents\Fun Stuff\Layers.txt", 'r+')
 
 txt_layers.seek(0)
@@ -58,6 +44,22 @@ for i in range(0, len(layers), 1):
      name.append(store[0])
      depth.append(store[1])
      environment.append(store[2])
+
+def deposit_layer(layer_name, layer_environment, thickness_size):
+     layer_name = input('Insert the rock type: ', )
+     layer_environment = input('Insert the environment type: ', )
+     thickness_size = int(input('Insert the thickness of the layer: ', ))
+
+     layer_name = layer_name.rstrip(' ')
+     layer_name = layer_name.replace(' ', '_')
+
+     name.append(layer_name)
+     environment.append(layer_environment)
+     thickness.append(thickness_size)
+
+     # for i in depth:
+     #       i = i + thickness_size
+     depth = [i + thickness_size for i in depth]
 
 if input('Would you like to add a new layer: Y/N\n',).capitalize() == 'Y':
      new_name = (input('Layer name: ',)).capitalize()
