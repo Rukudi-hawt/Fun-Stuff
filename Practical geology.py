@@ -28,7 +28,21 @@ def count_type(types):
           print(f'{i}: {types.count(i)}')
       print('\n')
 
-txt_layers= open(r"C:\Users\rukud\OneDrive\Documents\Fun Stuff\Layers.txt", 'r+')
+def deposit_layer(layer_name, layer_environment):
+     layer_name = input('Insert the rock type: ', )
+     layer_environment = input('Insert the environment type: ',)
+
+     if ' ' in layer_name:
+           layer_name.replace(' ', '_')
+
+     if layer_name(-1) == '_' or ' ':
+           layer_name(-1).delete
+
+     # name.append(layer_name)
+     # environment.append(layer_environment)
+
+
+txt_layers = open(r"C:\Users\rukud\OneDrive\Documents\Fun Stuff\Layers.txt", 'r+')
 
 txt_layers.seek(0)
 layers = []
