@@ -43,11 +43,22 @@ def depositional_event (layer_name, layer_environment, thickness_size):
      #       i = i + thickness_size
      depth = [i + thickness_size for i in depth]
 
+#probably going to have to move this to after erosion file opened and populated erosion_history list
+erosion_history = []
 def erosion_event (total_erosion):
       total_erosion = int(input('Input the total amount of erosion experienced: ',))
-      thickness[-1] = thickness[-1] - total_erosion
-      depth[-1] = depth[-1] - total_erosion
-      depth = [i - total_erosion for i in depth]
+      if total_erosion < thickness:
+          thickness[-1] = thickness[-1] - total_erosion
+      else:
+          del thickness[-1]
+     #what if the erosion is big enough to remove more than 1 layer's thickness
+      
+      depth = [i - total_erosion for i in depth] 
+      for i in range(0, len(depth), 1):
+            if depth[i] <= 0:
+                  del depth[i]
+                  del name[i]
+                  del environment[i]
 
 txt_layers = open(r"C:\Users\rukud\OneDrive\Documents\Fun Stuff\Layers.txt", 'r+')
 
